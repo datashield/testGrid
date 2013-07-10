@@ -1,1 +1,2 @@
 export(grid.density.limits)
+export(MinMax)
