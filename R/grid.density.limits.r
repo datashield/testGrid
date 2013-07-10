@@ -64,5 +64,8 @@ grid.density.limits <- function(xvect,yvect, x.min, x.max, y.min, y.max)
   #grid.density.obj<-data.frame(base::matrix(grid.density),as.vector(x.mids),as.vector(y.mids))
   grid.density.obj<-base::cbind(grid.density,x.mids,y.mids)
   
-  # return(grid.density.obj)
+  if (base::any(grid.density.obj)<=4)
+    base::warning('Some cells contain less than four values: the table is not displayed')
+  else
+    base::return(grid.density.obj)
 }
