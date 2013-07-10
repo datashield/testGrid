@@ -64,5 +64,5 @@ grid.density.limits <- function(xvect,yvect, x.min, x.max, y.min, y.max)
   #grid.density.obj<-data.frame(base::matrix(grid.density),as.vector(x.mids),as.vector(y.mids))
   grid.density.obj<-base::cbind(grid.density,x.mids,y.mids)
   
-  return(grid.density.obj)
+  # return(grid.density.obj)
 }
