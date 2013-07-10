@@ -13,5 +13,5 @@ MinMax = function(xvect, yvect) {
   MinMaxMatrix['max', 'xvect'] = base::max(xvect, na.rm=T)
   MinMaxMatrix['min', 'yvect'] = base::min(yvect, na.rm=T)
   MinMaxMatrix['max', 'yvect'] = base::max(yvect, na.rm=T)
-  base::return(MinMaxMatrix)  
+  # base::return(MinMaxMatrix)  
 }

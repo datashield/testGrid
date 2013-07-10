@@ -5,7 +5,8 @@ Version: 1.0
 License: GPL-3
 Title: Grid density object with defined limits (server)
 Description: Grid density object with defined limits (server)
-AggregateMethods: grid.density.limits, minmax
+AggregateMethods: grid.density.limits
+AssignMethods: minmax
 Collate:
     'grid.density.limits.r'
     'minmax.r'
