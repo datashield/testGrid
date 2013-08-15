@@ -80,8 +80,10 @@ grid.density.limits <- function(xvect,yvect, x.min, x.max, y.min, y.max, numints
 #   else
   
   
-  if (cell.count>0)
-    base::cat('\n Number of invalid cells is \n',cell.count)
+  if (cell.count>0) {
+    base::cat('\n Number of invalid cells is \n')
+    base::print(cell.count)
+  }
   
   base::return(grid.density.obj)
 }
