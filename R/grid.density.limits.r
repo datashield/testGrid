@@ -77,8 +77,8 @@ grid.density.limits <- function(xvect,yvect, x.min, x.max, y.min, y.max)
 #   if (base::any(grid.density.obj)<=4)
 #     base::warning('Some cells contain less than four values: the table is not displayed')
 #   else
-  base::print(grid.density.obj)
+  base::return(grid.density.obj)
   
-  if (cell.count>0)
-    base::cat('\n Number of invalid cells is \n',cell.count)
+#   if (cell.count>0)
+#     base::cat('\n Number of invalid cells is \n',cell.count)
 }
