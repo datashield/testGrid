@@ -14,7 +14,8 @@ MinMax = function(xvect, yvect) {
   MinMaxMatrix['min', 'yvect'] = base::min(yvect, na.rm=T)
   MinMaxMatrix['max', 'yvect'] = base::max(yvect, na.rm=T)
   
-  MinMaxMatrix['min', 'xvect'] = stats::runif(1, 1, 1.1) * MinMaxMatrix['min', 'xvect']
+  random_number = stats::runif(1, 1, 1.1)
+  MinMaxMatrix['min', 'xvect'] =  random_number * MinMaxMatrix['min', 'xvect']
 #   MinMaxMatrix['max', 'xvect'] = stats::runif(1, 1, 1.1) * MinMaxMatrix['max', 'xvect'] # * runif(1, 1, 1.1)
 #   MinMaxMatrix['min', 'yvect'] = stats::runif(1, 1, 1.1) * MinMaxMatrix['min', 'yvect'] # * runif(1, 1, 1.1)
 #   MinMaxMatrix['max', 'yvect'] = stats::runif(1, 1, 1.1) * MinMaxMatrix['max', 'yvect'] # * runif(1, 1, 1.1)
