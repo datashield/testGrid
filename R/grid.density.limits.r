@@ -8,7 +8,7 @@
 #' @param y.max a maximum value for the y axis of the grid density object
 #' @export
 #' 
-grid.density.limits <- function(xvect,yvect, x.min, x.max, y.min, y.max)
+grid.density.limits <- function(xvect,yvect, x.min, x.max, y.min, y.max, numints=20)
 {
   xvect.save<-xvect
   yvect.save<-yvect
@@ -36,7 +36,7 @@ grid.density.limits <- function(xvect,yvect, x.min, x.max, y.min, y.max)
   y.range<-y.max-y.min
   x.range<-x.max-x.min
   
-  numints<-20
+  # numints<-15
   y.interval<-y.range/numints
   x.interval<-x.range/numints
   
@@ -68,8 +68,8 @@ grid.density.limits <- function(xvect,yvect, x.min, x.max, y.min, y.max)
   
   
   
-  base::print(base::length(x.mids))
-  base::print(base::length(y.mids))
+#   base::print(base::length(x.mids))
+#   base::print(base::length(y.mids))
   
   #grid.density.obj<-data.frame(base::matrix(grid.density),as.vector(x.mids),as.vector(y.mids))
   grid.density.obj<-base::cbind(grid.density,x.mids,y.mids)
@@ -77,8 +77,8 @@ grid.density.limits <- function(xvect,yvect, x.min, x.max, y.min, y.max)
 #   if (base::any(grid.density.obj)<=4)
 #     base::warning('Some cells contain less than four values: the table is not displayed')
 #   else
-    base::return(grid.density.obj)
+  base::print(grid.density.obj)
   
   if (cell.count>0)
-    cat('Number of invalid cells is \n',cell.count)
+    base::cat('\n Number of invalid cells is \n',cell.count)
 }
