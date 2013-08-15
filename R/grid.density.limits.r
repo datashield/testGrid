@@ -6,6 +6,7 @@
 #' @param x.max a maximum value for the x axis of the grid density object
 #' @param y.min a minimum value for the y axis of the grid density object
 #' @param y.max a maximum value for the y axis of the grid density object
+#' @param numints a number of intervals for the grid density object, by default is 20
 #' @export
 #' 
 grid.density.limits <- function(xvect,yvect, x.min, x.max, y.min, y.max, numints=20)

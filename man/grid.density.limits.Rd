@@ -3,7 +3,7 @@
 \title{Generates a density grid with a priori defined limits}
 \usage{
   grid.density.limits(xvect, yvect, x.min, x.max, y.min,
-    y.max)
+    y.max, numints = 20)
 }
 \arguments{
   \item{xvect}{a numerical vector}
@@ -21,6 +21,9 @@
 
   \item{y.max}{a maximum value for the y axis of the grid
   density object}
+
+  \item{numints}{a number of intervals for the grid density
+  object, by default is 20}
 }
 \description{
   Generates a density grid with a priori defined limits
