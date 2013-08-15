@@ -50,14 +50,24 @@ grid.density.limits <- function(xvect,yvect, x.min, x.max, y.min, y.max)
   
   
   grid.density<-base::matrix(0,nrow=numints,ncol=numints)
+  cell.count = 0
   
   for(j in 1:numints)
   {
     for(k in 1:numints)
     {
       grid.density[j,k]<-base::sum(1*(yvect>=y.cuts[j] & yvect<y.cuts[j+1] & xvect >=x.cuts[k] & xvect<x.cuts[k+1]), na.rm=TRUE)
+      
+      if (grid.density[j,k]<=4) {
+        grid.density[j,k] = 0
+        cell.count = cell.count+1
+      }
+        
     }
   }
+  
+  
+  
   base::print(base::length(x.mids))
   base::print(base::length(y.mids))
   
@@ -68,4 +78,7 @@ grid.density.limits <- function(xvect,yvect, x.min, x.max, y.min, y.max)
 #     base::warning('Some cells contain less than four values: the table is not displayed')
 #   else
     base::return(grid.density.obj)
+  
+  if (cell.count>0)
+    cat('Number of invalid cells is \n',cell.count)
 }
